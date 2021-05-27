@@ -104,13 +104,13 @@ eth_fig = eth.plot()
 app.layout = html.Div(children=[
     # All elements from the top of the page
     html.Div([
-        html.H1(children='ErisX Dashboard'),
+        html.H1(children="SKM's Cryptoboard"),
 
         html.Div(children='''
             Live data provided via Coinbase using the coinbase-pro API: https://github.com/danpaquin/coinbasepro-python
         '''),
 
-        dcc.Graph(id='BTC/USD',figure=btc_fig,style={'width': '90vh', 'height': '90vh'}), #build chart and set size
+        dcc.Graph(id='BTC/USD',figure=btc_fig), #build chart and set size default
         dcc.Markdown('''
                 The above chart shows is a OHLC bar chart for each hour, along with volume, change (in USD),
                 and VWAP
@@ -121,7 +121,7 @@ app.layout = html.Div(children=[
     html.Div([
         html.H1(children=''),
 
-        dcc.Graph(id='ETH/BTC',figure=eth_fig,style={'width': '90vh', 'height': '90vh'}), # build chart and set size
+        dcc.Graph(id='ETH/BTC',figure=eth_fig), # build chart and set size default
         dcc.Markdown('''
                 The above chart shows ETH-BTC volume converted to USD on a per minute basis
                 ''') 
