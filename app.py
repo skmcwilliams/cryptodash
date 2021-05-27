@@ -112,7 +112,7 @@ app.layout = html.Div(children=[
 
         dcc.Graph(id='BTC/USD',figure=btc_fig), #build chart and set size default
         dcc.Markdown('''
-                The above chart shows is a OHLC bar chart for each hour, along with volume, change (in USD),
+                The above chart shows is a OHLC bar chart on a daily basis, along with volume, change (in USD),
                 and VWAP
                 ''')   
     ]),
