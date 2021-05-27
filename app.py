@@ -48,7 +48,7 @@ class BTC(Coin):
                         open=df['open'], 
                         high=df['high'],
                         low=df['low'], 
-                        close=df['close'],name='Bar'))
+                        close=df['close'],name='OHLC'))
         
         # include a go.Bar trace for volume
         fig.add_trace(go.Bar(x=df['time'], y=df['volume'],name='Volume'),
@@ -104,7 +104,7 @@ eth_fig = eth.plot()
 app.layout = html.Div(children=[
     # All elements from the top of the page
     html.Div([
-        html.H1(children="SKM's Cryptoboard"),
+        html.H1(children="Cryptodash"),
 
         html.Div(children='''
             Live data provided via Coinbase using the coinbase-pro API: https://github.com/danpaquin/coinbasepro-python
