@@ -106,8 +106,12 @@ app.layout = html.Div(children=[
     html.Div([
         html.H1(children="Cryptodash"),
 
-        html.Div(children='''
+        html.H2(children='''
             Live data provided via Coinbase using the coinbase-pro API: https://github.com/danpaquin/coinbasepro-python
+        '''),
+
+        html.H4(children='''
+            Code can be found here: https://github.com/skmcwilliams/cryptodash
         '''),
 
         dcc.Graph(id='BTC/USD',figure=btc_fig,style={'width': '90vh', 'height': '90vh'}), #build chart and set size smaller for better viz
